@@ -1,0 +1,36 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 當 main 分支有變更時觸發
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 檢出代碼
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. 設置 Node.js 環境
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 3. 安裝依賴項
+      - name: Install dependencies
+        run: npm install
+
+      # 4. 構建項目
+      - name: Build Angular project
+        run: npm run build -- --configuration production
+
+      # 5. 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist/count-board/browser # 指向構建後的輸出目錄
