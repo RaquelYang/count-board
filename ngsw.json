@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1732520137111,
-  "index": "/index.csr.html",
+  "timestamp": 1732524990937,
+  "index": "./dist/count-board/browser/index.csr.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/favicon.ico",
-        "/index.csr.html",
-        "/index.html",
-        "/main-MVJQV6IZ.js",
-        "/manifest.webmanifest",
-        "/polyfills-FFHMD2TL.js",
-        "/styles-D65NRABP.css"
+        "./dist/count-board/browser/favicon.ico",
+        "./dist/count-board/browser/index.csr.html",
+        "./dist/count-board/browser/index.html",
+        "./dist/count-board/browser/main-MVJQV6IZ.js",
+        "./dist/count-board/browser/manifest.webmanifest",
+        "./dist/count-board/browser/polyfills-FFHMD2TL.js",
+        "./dist/count-board/browser/styles-D65NRABP.css"
       ],
       "patterns": []
     },
@@ -29,35 +29,35 @@
         "ignoreVary": true
       },
       "urls": [
-        "/icons/icon-128x128.png",
-        "/icons/icon-144x144.png",
-        "/icons/icon-152x152.png",
-        "/icons/icon-192x192.png",
-        "/icons/icon-384x384.png",
-        "/icons/icon-512x512.png",
-        "/icons/icon-72x72.png",
-        "/icons/icon-96x96.png"
+        "./dist/count-board/browser/icons/icon-128x128.png",
+        "./dist/count-board/browser/icons/icon-144x144.png",
+        "./dist/count-board/browser/icons/icon-152x152.png",
+        "./dist/count-board/browser/icons/icon-192x192.png",
+        "./dist/count-board/browser/icons/icon-384x384.png",
+        "./dist/count-board/browser/icons/icon-512x512.png",
+        "./dist/count-board/browser/icons/icon-72x72.png",
+        "./dist/count-board/browser/icons/icon-96x96.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
-    "/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
-    "/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
-    "/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
-    "/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
-    "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
-    "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
-    "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/index.csr.html": "0cdab315ee00c7cbc89dd8e03845427cc3117dca",
-    "/index.html": "7045a54e77b18863fc5afa30ac7a78039b3d0811",
-    "/main-MVJQV6IZ.js": "cf0b30421275307d42253d7923ca9ff6fea9293e",
-    "/manifest.webmanifest": "b2535727d1d4e1442c495914a262f14114eb125f",
-    "/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "/styles-D65NRABP.css": "98625d8b53a03aac2a8eb7784e162bdbfb1908f9"
+    "./dist/count-board/browser/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "./dist/count-board/browser/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "./dist/count-board/browser/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "./dist/count-board/browser/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "./dist/count-board/browser/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "./dist/count-board/browser/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "./dist/count-board/browser/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "./dist/count-board/browser/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "./dist/count-board/browser/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "./dist/count-board/browser/index.csr.html": "838868f6b88be499d7d75052a962c1608d4d1629",
+    "./dist/count-board/browser/index.html": "cbae509f5e88f01109393e2bd4dddac07a822cff",
+    "./dist/count-board/browser/main-MVJQV6IZ.js": "cf0b30421275307d42253d7923ca9ff6fea9293e",
+    "./dist/count-board/browser/manifest.webmanifest": "b2535727d1d4e1442c495914a262f14114eb125f",
+    "./dist/count-board/browser/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "./dist/count-board/browser/styles-D65NRABP.css": "98625d8b53a03aac2a8eb7784e162bdbfb1908f9"
   },
   "navigationUrls": [
     {
