@@ -12,24 +12,24 @@ import { HammerModule } from '@angular/platform-browser';
 export class AppComponent {
   // 處理 Tap 事件
   onTap() {
-    console.log('Tap detected!');
+    alert('Tap detected!');
   }
 
   // 處理 Swipe 事件
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSwipe(event: any) {
-    console.log('Swipe detected', event);
+    alert('Swipe detected');
     if (event.deltaX > 0) {
-      console.log('Swiped Right');
+      alert('Swiped Right');
     } else {
-      console.log('Swiped Left');
+      alert('Swiped Left');
     }
   }
 
   // 處理 Pan 事件
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onPan(event: any) {
-    console.log('Pan detected', event);
-    console.log(`Moved by X: ${event.deltaX}, Y: ${event.deltaY}`);
+    alert('Pan detected');
+    alert(`Moved by X: ${event.deltaX}, Y: ${event.deltaY}`);
   }
 }
