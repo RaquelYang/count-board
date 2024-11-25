@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HammerModule } from '@angular/platform-browser';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-root',
@@ -9,26 +10,13 @@ import { HammerModule } from '@angular/platform-browser';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  // 處理 Tap 事件
-  onTap() {
-    alert('Tap detected!');
+  isMobile = false;
+  constructor(private deviceService: DeviceDetectorService) {
+    console.log(deviceService.getDeviceInfo());
   }
 
-  // 處理 Swipe 事件
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onSwipe(event: any) {
-    alert('Swipe detected');
-    if (event.deltaX > 0) {
-      alert('Swiped Right');
-    } else {
-      alert('Swiped Left');
-    }
-  }
-
-  // 處理 Pan 事件
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onPan(event: any) {
-    alert('Pan detected');
-    alert(`Moved by X: ${event.deltaX}, Y: ${event.deltaY}`);
+  ngOnInit(): void {
+    this.isMobile = this.deviceService.isMobile();
+    alert('是否為手機: ' + this.isMobile);
   }
 }
