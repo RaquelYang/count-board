@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
+import { HammerModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [BrowserModule, HammerModule],
+  imports: [HammerModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
