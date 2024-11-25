@@ -1,22 +1,26 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+// import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   deferredPrompt: any;
-  constructor() {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    window.addEventListener('beforeinstallprompt', (event: any) => {
-      event.preventDefault(); // 阻止默認提示
-      this.deferredPrompt = event; // 儲存事件供稍後使用
-    });
+  // eslint-disable-next-line @typescript-eslint/no-wrapper-object-types
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      window.addEventListener('beforeinstallprompt', (event: any) => {
+        event.preventDefault(); // Prevent the default prompt
+        this.deferredPrompt = event; // Save the event for later use
+      });
+    }
   }
 
   addToHomeScreen() {
