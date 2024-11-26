@@ -16,6 +16,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.isMobile = this.deviceService.isMobile();
-    alert('是否為手機: ' + this.isMobile);
+
   }
 }
