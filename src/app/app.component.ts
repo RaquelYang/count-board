@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
@@ -10,12 +11,23 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 })
 export class AppComponent implements OnInit {
   isMobile = false;
-  constructor(private deviceService: DeviceDetectorService) {
-    console.log(deviceService.getDeviceInfo());
+  orientation = '';
+  constructor(
+    private deviceService: DeviceDetectorService,
+    @Inject(PLATFORM_ID) private platformId: object
+  ) {
   }
 
   ngOnInit(): void {
     this.isMobile = this.deviceService.isMobile();
 
+    this.getWindow()?.addEventListener('orientationchange', () => {
+      this.orientation = this.deviceService.orientation;
+    })
+  }
+
+  getWindow(): Window | null {
+    return isPlatformBrowser(this.platformId) ? window : null;
   }
 }
+
