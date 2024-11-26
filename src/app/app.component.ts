@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
-import { HammerModule } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HammerModule],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   isMobile = false;
   constructor(private deviceService: DeviceDetectorService) {
     console.log(deviceService.getDeviceInfo());
