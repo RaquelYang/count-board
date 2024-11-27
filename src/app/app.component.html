@@ -1,7 +1,5 @@
-<div class="p-3">
-  <!-- @if (isMobile === true) { -->
-
-  <!-- @if (landscape === true) { -->
+<div class="p-3" id="gestureArea">
+  @if (isMobile && landscape) {
     <div class="flex content">
       <button class="count-board-content bg-orange-950" (click)="plusScore1()">
         {{score1()}}
@@ -19,12 +17,29 @@
 
     <button class="function-btn" (click)="resetScore()">歸零</button>
     <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
-  <!-- } @else { -->
-    <!-- <div class="flex items-center justify-center min-h-screen text-4xl">請將裝置轉成橫向</div> -->
-  <!-- } -->
-<!-- } -->
-</div>
-<!--
+  } @else {
+    <div class="flex items-center justify-center min-h-screen text-4xl">請將裝置轉成橫向</div>
+  }
+
+
 @if (isMobile === false) {
-  <div class="flex items-center justify-center min-h-screen text-4xl">請使用移動裝置開啟</div>
-} -->
+  <div class="flex content">
+      <button class="count-board-content bg-orange-950" (click)="plusScore1()">
+        {{score1()}}
+        @if(showMinus) {
+          <button class="minus-btn" (click)="minusScore1($event)">minus</button>
+        }
+      </button>
+      <button class="count-board-content bg-green-950" (click)="plusScore2()">
+        {{score2()}}
+        @if(showMinus) {
+          <button class="minus-btn" (click)="minusScore2($event)">minus</button>
+        }
+      </button>
+    </div>
+
+    <button class="function-btn" (click)="resetScore()">歸零</button>
+    <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
+}
+
+</div>
