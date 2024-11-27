@@ -1,0 +1,23 @@
+.content {
+  min-height: calc(100vh - 1.5rem);
+}
+
+.count-board-content {
+  @apply w-3/6 text-center text-gray-50 rounded relative;
+  font-size: 200px;
+  & + & {
+    @apply ml-3
+  }
+}
+
+.minus-btn {
+  @apply text-2xl bg-orange-700 py-2 px-4 rounded absolute bottom-2 left-1/2;
+  transform: translateX(-50%);
+}
+
+.function-btn {
+  @apply bg-orange-700 text-white py-2 px-4 rounded mt-3;
+  & + & {
+    @apply ml-3
+  }
+}
