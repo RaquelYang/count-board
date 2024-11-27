@@ -1,12 +1,10 @@
 import { afterNextRender, Component, HostListener, signal} from '@angular/core';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import Hammer from 'hammerjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [BrowserModule, HammerModule],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -21,12 +19,6 @@ export class AppComponent {
     deviceService: DeviceDetectorService,
   ) {
     this.isMobile = deviceService.isMobile();
-
-    const element = document.getElementById('gestureArea') as HTMLElement;
-    const hammer = new Hammer(element);
-
-    hammer.on('swipe', (event) => console.log('Swipe detected:', event));
-    hammer.on('doubletap', (event) => console.log('Double Tap detected:', event));
 
     afterNextRender(() => {
       const orientationAngle = window.screen.orientation.angle;
