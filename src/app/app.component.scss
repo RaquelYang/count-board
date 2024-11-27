@@ -3,7 +3,7 @@
 }
 
 .count-board-content {
-  @apply w-3/6 text-center text-gray-50 rounded relative;
+  @apply w-3/6 text-center text-gray-50 rounded relative font-bold;
   font-size: 200px;
   & + & {
     @apply ml-3

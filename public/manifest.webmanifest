@@ -2,8 +2,9 @@
   "name": "count-board",
   "short_name": "count-board",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
+  "background_color": "#000",
+  "display": "fullscreen",
+  "orientation": "landscape",
   "scope": "./",
   "start_url": "./",
   "icons": [
