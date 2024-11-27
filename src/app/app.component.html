@@ -1,7 +1,7 @@
 <div class="p-3">
-  @if (isMobile === true) {
+  <!-- @if (isMobile === true) { -->
 
-  @if (landscape === true) {
+  <!-- @if (landscape === true) { -->
     <div class="flex content">
       <button class="count-board-content bg-orange-950" (click)="plusScore1()">
         {{score1()}}
@@ -19,12 +19,12 @@
 
     <button class="function-btn" (click)="resetScore()">歸零</button>
     <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
-  } @else {
-    <div class="flex items-center justify-center min-h-screen text-4xl">請將裝置轉成橫向</div>
-  }
-}
+  <!-- } @else { -->
+    <!-- <div class="flex items-center justify-center min-h-screen text-4xl">請將裝置轉成橫向</div> -->
+  <!-- } -->
+<!-- } -->
 </div>
-
+<!--
 @if (isMobile === false) {
   <div class="flex items-center justify-center min-h-screen text-4xl">請使用移動裝置開啟</div>
-}
+} -->
