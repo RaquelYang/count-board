@@ -1,12 +1,10 @@
 import { afterNextRender, Component, HostListener, signal} from '@angular/core';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import Hammer from 'hammerjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [BrowserModule, HammerModule],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -17,16 +15,11 @@ export class AppComponent {
   score2 = signal(0);
   showMinus = false;
 
+
   constructor(
     deviceService: DeviceDetectorService,
   ) {
     this.isMobile = deviceService.isMobile();
-
-    const element = document.getElementById('gestureArea') as HTMLElement;
-    const hammer = new Hammer(element);
-
-    hammer.on('swipe', (event) => console.log('Swipe detected:', event));
-    hammer.on('doubletap', (event) => console.log('Double Tap detected:', event));
 
     afterNextRender(() => {
       const orientationAngle = window.screen.orientation.angle;
@@ -74,6 +67,26 @@ export class AppComponent {
     this.score1.set(0);
     this.score2.set(0);
     this.showMinus = false;
+  }
+
+
+
+  takePhoto() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any).navigator.camera.getPicture(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (imageData: any) => {
+    console.log('Photo taken:', imageData);
+  },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (error: any) => {
+    console.error('Camera error:', error);
+  },
+  {
+    quality: 50,
+    destinationType: 1, // Camera.DestinationType.FILE_URI
+  }
+);
   }
 }
 

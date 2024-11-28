@@ -1,4 +1,4 @@
-<div class="p-3" id="gestureArea">
+<div class="p-3">
   @if (isMobile && landscape) {
     <div class="flex content">
       <button class="count-board-content bg-orange-950" (click)="plusScore1()">
@@ -20,7 +20,7 @@
   } @else {
     <div class="flex items-center justify-center min-h-screen text-4xl">請將裝置轉成橫向</div>
   }
-
+</div>
 
 @if (isMobile === false) {
   <div class="flex content">
@@ -42,4 +42,4 @@
     <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
 }
 
-</div>
+<button (click)="takePhoto()">takePhoto</button>
