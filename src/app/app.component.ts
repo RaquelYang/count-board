@@ -15,7 +15,6 @@ export class AppComponent {
   score2 = signal(0);
   showMinus = false;
 
-
   constructor(
     deviceService: DeviceDetectorService,
   ) {
@@ -67,26 +66,6 @@ export class AppComponent {
     this.score1.set(0);
     this.score2.set(0);
     this.showMinus = false;
-  }
-
-
-
-  takePhoto() {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (window as any).navigator.camera.getPicture(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (imageData: any) => {
-    console.log('Photo taken:', imageData);
-  },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (error: any) => {
-    console.error('Camera error:', error);
-  },
-  {
-    quality: 50,
-    destinationType: 1, // Camera.DestinationType.FILE_URI
-  }
-);
   }
 }
 
