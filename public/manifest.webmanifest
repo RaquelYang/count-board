@@ -3,8 +3,8 @@
   "short_name": "count-board",
   "theme_color": "#1976d2",
   "background_color": "#000",
-  "display": "fullscreen",
-  "orientation": "landscape",
+  "display": "standalone",
+  "orientation": "landscape-primary",
   "scope": "./",
   "start_url": "./",
   "icons": [
