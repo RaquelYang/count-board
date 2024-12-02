@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { afterNextRender, Component, HostListener, signal} from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
