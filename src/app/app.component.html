@@ -1,6 +1,6 @@
-<div class="p-3">
-  @if (isMobile && landscape) {
-    <div class="flex content">
+<div class="p-3" [ngClass]="{'landscape': landscape}">
+  @if (isMobile) {
+    <div class="flex flex-wrap content">
       <button class="count-board-content bg-orange-950" (click)="plusScore1()">
         {{score1()}}
         @if(showMinus) {
@@ -17,12 +17,10 @@
 
     <button class="function-btn" (click)="resetScore()">歸零</button>
     <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
-  } @else {
-    <div class="flex items-center justify-center min-h-screen text-4xl">請將裝置轉成橫向</div>
   }
 </div>
 
-@if (isMobile === false) {
+@if (!isMobile) {
   <div class="flex content">
       <button class="count-board-content bg-orange-950" (click)="plusScore1()">
         {{score1()}}

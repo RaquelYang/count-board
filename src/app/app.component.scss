@@ -2,12 +2,18 @@
   min-height: calc(100vh - 1.5rem);
 }
 
-.count-board-content {
-  @apply w-3/6 text-center text-gray-50 rounded relative font-bold;
-  font-size: 200px;
-  & + & {
-    @apply ml-3
+:not(.landscape) {
+  .count-board-content {
+    @apply w-full
   }
+  .count-board-content + .count-board-content {
+    @apply ml-0
+  }
+}
+
+.count-board-content {
+  @apply text-center text-gray-50 rounded relative font-bold;
+  font-size: 200px;
 }
 
 .minus-btn {
@@ -19,5 +25,11 @@
   @apply bg-orange-700 text-white py-2 px-4 rounded mt-3;
   & + & {
     @apply ml-3
+  }
+}
+
+.landscape {
+  .count-board-content {
+    @apply w-3/6
   }
 }
