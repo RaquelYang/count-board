@@ -18,9 +18,8 @@
     <button class="function-btn" (click)="resetScore()">歸零</button>
     <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
   }
-</div>
 
-@if (!isMobile) {
+  @if (!isMobile) {
   <div class="flex content">
       <button class="count-board-content bg-orange-950" (click)="plusScore1()">
         {{score1()}}
@@ -39,3 +38,6 @@
     <button class="function-btn" (click)="resetScore()">歸零</button>
     <button class="function-btn" (click)="showMinus = !showMinus">-1</button>
 }
+</div>
+
+
